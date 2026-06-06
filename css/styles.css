@@ -1,0 +1,715 @@
+/* =========================================================
+   Cream Hill Lake Association — styles.css
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+/* ---------------------------------------------------------
+   Reset & base
+   --------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green-darkest:  #0f3526;
+  --green-dark:     #1a4a3a;
+  --green-mid:      #2a6a50;
+  --green-soft:     #3a8060;
+  --green-light:    #7fbba4;
+  --green-pale:     #b8d9c8;
+  --green-ghost:    #e2f4ec;
+  --green-mist:     #f0faf5;
+
+  --amber:          #e8a84a;
+  --text-primary:   #1a2e25;
+  --text-secondary: #4a6558;
+  --text-muted:     #7a9a8a;
+
+  --border:         rgba(127, 187, 164, 0.35);
+  --border-strong:  rgba(127, 187, 164, 0.6);
+
+  --font-display:   'Playfair Display', Georgia, serif;
+  --font-body:      'Source Sans 3', system-ui, sans-serif;
+
+  --radius-sm:      6px;
+  --radius-md:      10px;
+  --radius-lg:      14px;
+
+  --nav-height:     60px;
+  --max-width:      960px;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: #ffffff;
+  line-height: 1.65;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--green-mid);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--green-dark);
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------
+   Navigation
+   --------------------------------------------------------- */
+.site-nav {
+  background: var(--green-dark);
+  height: var(--nav-height);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(15, 53, 38, 0.18);
+}
+
+.nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav-brand-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.nav-brand-name {
+  font-family: var(--font-display);
+  color: var(--green-ghost);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--green-pale);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+}
+
+.nav-links a.nav-login {
+  background: var(--green-soft);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+}
+
+.nav-links a.nav-login:hover {
+  background: var(--green-mid);
+}
+
+/* Hamburger — hidden on desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--green-pale);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* ---------------------------------------------------------
+   Page wrapper & content
+   --------------------------------------------------------- */
+.page-content {
+  flex: 1;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---------------------------------------------------------
+   Hero
+   --------------------------------------------------------- */
+.hero {
+  background: var(--green-mist);
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center 60%;
+  display: block;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(15,53,38,0.82) 0%, rgba(15,53,38,0.3) 60%, transparent 100%);
+  padding: 2.5rem 2rem 2rem;
+}
+
+.hero-text h1 {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: var(--green-ghost);
+  max-width: 480px;
+  margin-bottom: 1rem;
+}
+
+.hero-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(4px);
+}
+
+/* ---------------------------------------------------------
+   Section
+   --------------------------------------------------------- */
+.section {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 400;
+  color: var(--green-dark);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--green-light);
+  display: inline-block;
+}
+
+.section-intro {
+  font-size: 15px;
+  color: var(--text-secondary);
+  max-width: 640px;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------------------------------------------------------
+   Quick links grid (home page)
+   --------------------------------------------------------- */
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.quick-card {
+  background: var(--green-mist);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-primary);
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  display: block;
+}
+
+.quick-card:hover {
+  background: var(--green-ghost);
+  border-color: var(--green-light);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.quick-card i {
+  font-size: 26px;
+  color: var(--green-soft);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.quick-card span {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--green-dark);
+}
+
+/* ---------------------------------------------------------
+   Events list
+   --------------------------------------------------------- */
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.event-item {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.event-item:last-child {
+  border-bottom: none;
+}
+
+.event-date {
+  background: var(--green-dark);
+  color: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 7px 12px;
+  text-align: center;
+  min-width: 56px;
+  flex-shrink: 0;
+}
+
+.event-date .month {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: block;
+  color: var(--green-pale);
+}
+
+.event-date .day {
+  font-size: 22px;
+  font-weight: 500;
+  display: block;
+  line-height: 1.1;
+}
+
+.event-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.event-info p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ---------------------------------------------------------
+   Rules tabs
+   --------------------------------------------------------- */
+.rules-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.75rem;
+  flex-wrap: wrap;
+}
+
+.rules-tab {
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--green-pale);
+  background: #ffffff;
+  color: var(--green-dark);
+  font-family: var(--font-body);
+  transition: all 0.15s;
+}
+
+.rules-tab:hover {
+  background: var(--green-mist);
+  border-color: var(--green-light);
+}
+
+.rules-tab.active {
+  background: var(--green-dark);
+  color: #ffffff;
+  border-color: var(--green-dark);
+}
+
+.rules-panel {
+  display: none;
+}
+
+.rules-panel.active {
+  display: block;
+}
+
+.rule-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14.5px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.rule-item:last-child {
+  border-bottom: none;
+}
+
+.rule-item i {
+  color: var(--green-soft);
+  flex-shrink: 0;
+  font-size: 17px;
+  margin-top: 2px;
+}
+
+/* ---------------------------------------------------------
+   Gallery grid
+   --------------------------------------------------------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.gallery-item {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--green-ghost);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+.gallery-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--green-soft);
+}
+
+.gallery-placeholder i {
+  font-size: 30px;
+}
+
+.gallery-placeholder span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* ---------------------------------------------------------
+   Contact grid
+   --------------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.contact-card {
+  background: var(--green-mist);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.contact-card h3 {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1rem;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.contact-row i {
+  color: var(--green-soft);
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.contact-row a {
+  color: var(--green-mid);
+}
+
+/* ---------------------------------------------------------
+   History page
+   --------------------------------------------------------- */
+.history-body {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  max-width: 680px;
+}
+
+.history-body p + p {
+  margin-top: 1.25rem;
+}
+
+.history-img {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+}
+
+/* ---------------------------------------------------------
+   Members portal (login page)
+   --------------------------------------------------------- */
+.login-wrap {
+  max-width: 380px;
+  margin: 3rem auto;
+  background: var(--green-mist);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.login-wrap h1 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--green-dark);
+  margin-bottom: 0.4rem;
+}
+
+.login-wrap p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 1.75rem;
+}
+
+.login-field {
+  width: 100%;
+  padding: 10px 14px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.login-field:focus {
+  outline: none;
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(42, 106, 80, 0.12);
+}
+
+.login-btn {
+  width: 100%;
+  background: var(--green-dark);
+  color: #ffffff;
+  border: none;
+  padding: 11px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: background 0.15s;
+  margin-top: 4px;
+}
+
+.login-btn:hover {
+  background: var(--green-darkest);
+}
+
+.login-note {
+  margin-top: 1.25rem;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.login-note a {
+  color: var(--green-mid);
+}
+
+/* ---------------------------------------------------------
+   Page header (non-home pages)
+   --------------------------------------------------------- */
+.page-header {
+  padding: 2.5rem 0 0;
+}
+
+.page-header h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--green-dark);
+  margin-bottom: 0.3rem;
+}
+
+.page-header p {
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+/* ---------------------------------------------------------
+   Footer
+   --------------------------------------------------------- */
+.site-footer {
+  background: var(--green-darkest);
+  color: var(--green-light);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 12.5px;
+  margin-top: auto;
+}
+
+.site-footer a {
+  color: var(--green-pale);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------
+   Responsive
+   --------------------------------------------------------- */
+@media (max-width: 700px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--green-darkest);
+    padding: 1rem;
+    gap: 4px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero-text h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-img {
+    height: 300px;
+  }
+
+  .contact-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

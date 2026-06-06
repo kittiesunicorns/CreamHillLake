@@ -1,0 +1,60 @@
+{
+  "site": {
+    "name": "Cream Hill Lake Association",
+    "shortName": "CHLA",
+    "tagline": "A private lake club for Cornwall families since 1891",
+    "url": "https://chlaweb.org",
+    "established": 1891
+  },
+  "contact": {
+    "clubhousePhone": "(860) 672-6750",
+    "secretaryEmail": "lorybevans@chlaweb.org",
+    "mailingAddress": "P.O. Box 293",
+    "city": "West Cornwall",
+    "state": "CT",
+    "zip": "06796"
+  },
+  "board": {
+    "president": "Ted Schillinger",
+    "vicePresident": "Tory Jadow",
+    "secretary": "Lory Bevans"
+  },
+  "season": {
+    "opens": "Mid-June",
+    "closes": "Labor Day",
+    "waterfrontHours": "Dawn to dusk",
+    "tennisHours": "Dawn to dusk, year-round"
+  },
+  "events": [
+    {
+      "month": "Jun",
+      "day": 22,
+      "title": "Annual preliminary meeting",
+      "detail": "4:30 p.m. · Clubhouse · All members welcome"
+    },
+    {
+      "month": "Jul",
+      "day": 4,
+      "title": "Fourth of July BBQ",
+      "detail": "Noon · Waterfront · Bring a dish to share"
+    },
+    {
+      "month": "Jul",
+      "day": 19,
+      "title": "Tennis round-robin",
+      "detail": "9:00 a.m. · Courts · All levels welcome"
+    },
+    {
+      "month": "Aug",
+      "day": 10,
+      "title": "Summer family picnic",
+      "detail": "3:00 p.m. · Waterfront · Swim, play, eat"
+    },
+    {
+      "month": "Sep",
+      "day": 6,
+      "title": "End-of-season cookout",
+      "detail": "5:00 p.m. · Clubhouse · See you next summer"
+    }
+  ]
+}

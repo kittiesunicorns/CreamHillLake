@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "CHLA Members"
+AuthUserFile /home/unicorn/public_html/creamhilllake.org/members/.htpasswd
+Require valid-user

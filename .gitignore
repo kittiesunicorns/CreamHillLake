@@ -1,0 +1,11 @@
+# Never commit the password file
+members/.htpasswd
+
+# Mac junk
+.DS_Store
+**/.DS_Store
+
+# Editor cruft
+*.swp
+*.swo
+.sublime-workspace

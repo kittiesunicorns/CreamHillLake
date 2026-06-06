@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rules, hours, and guidelines for Cream Hill Lake Association members — waterfront, tennis courts, and bylaws." />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Rules &amp; Hours — Cream Hill Lake Association</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <svg class="nav-brand-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="17" cy="17" r="16" fill="#2a6a50"/>
+          <path d="M7 23 Q11 18 15 21 Q19 24 23 19 Q27 14 29 17" stroke="#7fbba4" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M17 9 L17 19 M14 12 L17 9 L20 12" stroke="#b8d9c8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <ellipse cx="17" cy="21" rx="5" ry="2" fill="#3a8060" opacity="0.55"/>
+        </svg>
+        <span class="nav-brand-name">Cream Hill Lake Association</span>
+      </a>
+      <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">
+        <i class="ti ti-menu-2"></i>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="rules.html" class="active">Rules</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="members/" class="nav-login">Members</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-content">
+
+    <div class="page-header">
+      <h1>Rules &amp; guidelines</h1>
+      <p>Waterfront, tennis courts, hours, and bylaws</p>
+    </div>
+
+    <div class="section">
+      <div class="rules-tabs" role="tablist">
+        <button class="rules-tab active" role="tab" aria-selected="true"  onclick="showPanel('waterfront', this)">Waterfront</button>
+        <button class="rules-tab"         role="tab" aria-selected="false" onclick="showPanel('tennis', this)">Tennis courts</button>
+        <button class="rules-tab"         role="tab" aria-selected="false" onclick="showPanel('hours', this)">Hours</button>
+        <button class="rules-tab"         role="tab" aria-selected="false" onclick="showPanel('bylaws', this)">Bylaws</button>
+      </div>
+
+      <!-- WATERFRONT -->
+      <div class="rules-panel active" id="panel-waterfront" role="tabpanel">
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Swimming is permitted only when a lifeguard or designated supervisor is on duty.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Children under 12 must be accompanied by an adult at the waterfront at all times.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Life jackets are required for all boaters under 16 and strongly recommended for all.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>No motorized boats except approved electric motors. No wake near the swimming area.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Guests must be accompanied by a member at all times on the waterfront.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Glass containers are not permitted on the dock or beach.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Please leave the waterfront cleaner than you found it.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>No diving from the dock except at designated areas.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Dogs are not permitted on the beach or dock during swimming hours.</div>
+      </div>
+
+      <!-- TENNIS -->
+      <div class="rules-panel" id="panel-tennis" role="tabpanel">
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Courts are for members and their accompanied guests only.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Singles play is limited to 1 hour when others are waiting. Doubles limited to 1.5 hours.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Proper tennis shoes required. No bare feet, flip flops, or cleats on court surfaces.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Equipment is available in the clubhouse. Please return all balls and rackets after use.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Courts close at dusk unless lights are available and arranged in advance.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Players waiting take priority over a second set if courts are in demand.</div>
+        <div class="rule-item"><i class="ti ti-check" aria-hidden="true"></i>Please report any court damage or maintenance needs to the board.</div>
+      </div>
+
+      <!-- HOURS -->
+      <div class="rules-panel" id="panel-hours" role="tabpanel">
+        <div class="rule-item"><i class="ti ti-clock" aria-hidden="true"></i><strong>Waterfront &amp; swimming:</strong>&nbsp; Dawn to dusk, mid-June through Labor Day</div>
+        <div class="rule-item"><i class="ti ti-clock" aria-hidden="true"></i><strong>Lifeguard on duty:</strong>&nbsp; Check the posted schedule at the clubhouse</div>
+        <div class="rule-item"><i class="ti ti-clock" aria-hidden="true"></i><strong>Boating:</strong>&nbsp; Sunrise to sunset during the summer season</div>
+        <div class="rule-item"><i class="ti ti-clock" aria-hidden="true"></i><strong>Tennis courts:</strong>&nbsp; Dawn to dusk, year-round</div>
+        <div class="rule-item"><i class="ti ti-clock" aria-hidden="true"></i><strong>Clubhouse:</strong>&nbsp; Open for scheduled events; contact the board for access</div>
+        <div class="rule-item"><i class="ti ti-clock" aria-hidden="true"></i><strong>Season opens:</strong>&nbsp; Mid-June</div>
+        <div class="rule-item"><i class="ti ti-clock" aria-hidden="true"></i><strong>Season closes:</strong>&nbsp; Labor Day weekend</div>
+      </div>
+
+      <!-- BYLAWS -->
+      <div class="rules-panel" id="panel-bylaws" role="tabpanel">
+        <p style="font-size:14px; color: var(--text-secondary); margin-bottom: 1.25rem; line-height: 1.7;">
+          Membership in the Cream Hill Lake Association is open to individuals 18 or older who dwell in Cornwall. Each membership receives one vote at Association meetings. Below are the key articles; full bylaws are available from the Secretary upon request.
+        </p>
+        <div class="rule-item"><i class="ti ti-file-text" aria-hidden="true"></i><strong>Article I — Name:</strong>&nbsp; Cream Hill Lake Association, Incorporated</div>
+        <div class="rule-item"><i class="ti ti-file-text" aria-hidden="true"></i><strong>Article II — Objects:</strong>&nbsp; Preservation of the natural beauty of Cream Hill Lake; maintenance of a clubhouse; boating, bathing, tennis, and suitable amusement for members</div>
+        <div class="rule-item"><i class="ti ti-file-text" aria-hidden="true"></i><strong>Article III — Membership:</strong>&nbsp; Open to Cornwall residents 18 and older; "dwelling in Cornwall" requirement applies; one vote per membership</div>
+        <div class="rule-item"><i class="ti ti-file-text" aria-hidden="true"></i><strong>Membership review:</strong>&nbsp; The Executive Committee reviews the membership list yearly and may terminate memberships that do not meet requirements for 24 consecutive months</div>
+        <div class="rule-item"><i class="ti ti-mail" aria-hidden="true"></i>Full bylaws: contact <a href="mailto:lorybevans@chlaweb.org">lorybevans@chlaweb.org</a></div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      Cream Hill Lake Association &middot; West Cornwall, CT &middot; Est. 1891
+      &middot; <a href="mailto:lorybevans@chlaweb.org">lorybevans@chlaweb.org</a>
+      &middot; <a href="tel:+18606726750">(860) 672-6750</a>
+    </div>
+  </footer>
+
+  <script>
+    function showPanel(name, btn) {
+      document.querySelectorAll('.rules-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.rules-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+      document.getElementById('panel-' + name).classList.add('active');
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+    }
+  </script>
+
+</body>
+</html>

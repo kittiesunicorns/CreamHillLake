@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/unicorn/public_html/creamhilllake.org/
+    - /bin/cp -R * $DEPLOYPATH
