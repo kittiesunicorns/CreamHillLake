@@ -188,7 +188,7 @@
 
             </div>
 
-            <!-- Right Side: Interactive Milestones & AI Sidebar (5 Columns) -->
+            <!-- Right Side: Interactive Milestones (5 Columns) -->
             <div class="lg:col-span-5 space-y-8 sticky top-24">
                 
                 <!-- Timeline Section -->
@@ -215,7 +215,7 @@
                     </div>
 
                     <!-- Scrollable Simple Timeline Area -->
-                    <div class="relative pl-4 border-l border-lake-600/20 space-y-6 max-h-[380px] overflow-y-auto custom-scrollbar pr-2" id="timeline-container">
+                    <div class="relative pl-4 border-l border-lake-600/20 space-y-6 max-h-[480px] overflow-y-auto custom-scrollbar pr-2" id="timeline-container">
                         
                         <!-- 1921 -->
                         <div class="timeline-item relative group" data-year="1921">
@@ -326,8 +326,8 @@
                     </div>
                 </div>
 
-                <!-- AI Lakeside Archivist Sidebar -->
-                <div class="bg-lake-750 bg-lake-800 text-cream-50 rounded-3xl border border-lake-700 p-6 shadow-md relative overflow-hidden">
+                <!-- AI Lakeside Archivist Sidebar (TEMPORARILY COMMENTED OUT FOR NOW)
+                <div class="bg-lake-800 text-cream-50 rounded-3xl border border-lake-700 p-6 shadow-md relative overflow-hidden">
                     <div class="absolute -right-12 -bottom-12 w-40 h-40 rounded-full bg-lake-700/20 blur-xl pointer-events-none"></div>
 
                     <div class="flex items-center space-x-3 mb-4">
@@ -344,7 +344,6 @@
                         Do you have questions about the five founders of 1891, the Saturday Teas, old house rules, or early swim feats? Ask me below!
                     </p>
 
-                    <!-- Ask/Input Interface -->
                     <div class="space-y-3">
                         <div class="flex flex-col gap-1.5">
                             <label for="ai-prompt" class="sr-only">Ask a historical question</label>
@@ -356,12 +355,12 @@
                         </button>
                     </div>
 
-                    <!-- AI Response Area -->
                     <div id="ai-response-container" class="hidden mt-4 pt-4 border-t border-lake-700/50 animate-fade-in">
                         <span class="text-[10px] uppercase tracking-widest text-cream-200/50 font-bold block mb-1.5">Archivist Response</span>
                         <div id="ai-response-text" class="text-xs text-cream-100/95 leading-relaxed bg-lake-900/30 rounded-xl p-3 border border-lake-700/20 max-h-48 overflow-y-auto custom-scrollbar"></div>
                     </div>
                 </div>
+                -->
 
             </div>
 
@@ -506,7 +505,7 @@ Rules for response:
                 return "Indeed, our traditional Fourth of July fireworks were permanently discontinued in 1931. This was a direct decision following a rather infamous and accidental 'fireworks fiasco' during the summer of 1930. Community safety was rightly prioritized from that point onward.";
             }
             if (p.includes('road') || p.includes('access') || p.includes('driveway') || p.includes('path') || p.includes('1923')) {
-                return "In our earliest years, reaching the water meant taking a simple walking path through farmer Sam's active barnyard and pastures. That changed completely in 1923, when our very first dedicated access road—the very approach we drive on today—was finally completed.";
+                return "In our earliest years, reaching the water meant taking a simple walking path through farmer Sam's active active barnyard pastures. That changed completely in 1923, when our very first dedicated access road—the very approach we drive on today—was finally completed.";
             }
             if (p.includes('bylaw') || p.includes('dues') || p.includes('limit') || p.includes('30') || p.includes('member')) {
                 return "Our original 1910 bylaws set high standards! Active voting membership was strictly capped at 30 year-round resident families, with summer residents joining as associate members. Dues were just $5 per year. The original five founders were honored as charter members, completely exempt from all dues.";
