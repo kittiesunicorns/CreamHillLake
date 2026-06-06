@@ -188,7 +188,7 @@
 
             </div>
 
-            <!-- Right Side: Interactive Milestones & AI Sidebar (5 Columns) -->
+            <!-- Right Side: Interactive Milestones (5 Columns) -->
             <div class="lg:col-span-5 space-y-8 sticky top-24">
                 
                 <!-- Timeline Section -->
@@ -215,7 +215,7 @@
                     </div>
 
                     <!-- Scrollable Simple Timeline Area -->
-                    <div class="relative pl-4 border-l border-lake-600/20 space-y-6 max-h-[380px] overflow-y-auto custom-scrollbar pr-2" id="timeline-container">
+                    <div class="relative pl-4 border-l border-lake-600/20 space-y-6 max-h-[480px] overflow-y-auto custom-scrollbar pr-2" id="timeline-container">
                         
                         <!-- 1921 -->
                         <div class="timeline-item relative group" data-year="1921">
@@ -326,8 +326,8 @@
                     </div>
                 </div>
 
-                <!-- AI Lakeside Archivist Sidebar -->
-                <div class="bg-lake-750 bg-lake-800 text-cream-50 rounded-3xl border border-lake-700 p-6 shadow-md relative overflow-hidden">
+                <!-- AI Lakeside Archivist Sidebar (TEMPORARILY COMMENTED OUT FOR NOW)
+                <div class="bg-lake-800 text-cream-50 rounded-3xl border border-lake-700 p-6 shadow-md relative overflow-hidden">
                     <div class="absolute -right-12 -bottom-12 w-40 h-40 rounded-full bg-lake-700/20 blur-xl pointer-events-none"></div>
 
                     <div class="flex items-center space-x-3 mb-4">
@@ -344,7 +344,6 @@
                         Do you have questions about the five founders of 1891, the Saturday Teas, old house rules, or early swim feats? Ask me below!
                     </p>
 
-                    <!-- Ask/Input Interface -->
                     <div class="space-y-3">
                         <div class="flex flex-col gap-1.5">
                             <label for="ai-prompt" class="sr-only">Ask a historical question</label>
@@ -356,12 +355,12 @@
                         </button>
                     </div>
 
-                    <!-- AI Response Area -->
                     <div id="ai-response-container" class="hidden mt-4 pt-4 border-t border-lake-700/50 animate-fade-in">
                         <span class="text-[10px] uppercase tracking-widest text-cream-200/50 font-bold block mb-1.5">Archivist Response</span>
                         <div id="ai-response-text" class="text-xs text-cream-100/95 leading-relaxed bg-lake-900/30 rounded-xl p-3 border border-lake-700/20 max-h-48 overflow-y-auto custom-scrollbar"></div>
                     </div>
                 </div>
+                -->
 
             </div>
 
@@ -483,7 +482,52 @@ Rules for response:
             filterTimeline('all');
         }
 
-        // Gemini AI Archivist Integration with Exponential Backoff
+        // Highly robust local search & fallback engine when Gemini API is offline/empty
+        function getLocalResponse(prompt) {
+            const p = prompt.toLowerCase();
+            
+            if (p.includes('founder') || p.includes('original five') || p.includes('samuel') || p.includes('william') || p.includes('gold') || p.includes('calhoun')) {
+                return "Ah, the pioneering summer of 1891! Our beloved boathouse was constructed by five visionary young men: Samuel Scoville Jr. (just 19 at the time), his brother William (18), cousin Samuel R. Scoville, Charles L. Gold, and John E. Calhoun. They generously opened their creation to early neighbors, seeding the timeless spirit of community we still cherish today.";
+            }
+            if (p.includes('tea') || p.includes('cookie') || p.includes('cake') || p.includes('sandwich') || p.includes('decorum') || p.includes('social') || p.includes('saturday')) {
+                return "The legendary Saturday Teas at 4:00 PM! Every week, meticulously dressed members would gather for a majestic spread of fresh home-baked cookies, cakes, and elegant sandwiches. It was the social centerpiece of early life here, characterized by deep decorum, long before cocktail parties had ever emerged.";
+            }
+            if (p.includes('rule') || p.includes('under 14') || p.includes('bathing suit') || p.includes('sunday') || p.includes('bare-chested') || p.includes('dance')) {
+                return "In the 1920s and 30s, the Association prioritized strict decorum. Children under 14 were barred from the upper floor between 3:00 and 6:00 PM, and bathing suits were forbidden upstairs at all times. Sunday dancing or phonograph play was forbidden, and bare-chested swimming for men was only accepted in the late 1920s.";
+            }
+            if (p.includes('swim') || p.includes('across') || p.includes('fifty') || p.includes('avid')) {
+                return "Samuel Scoville Jr. was a legendary figure in our waters! He first swam across Cream Hill Lake and back at the tender age of twelve. Driven by pure enthusiasm, he repeated this impressive distance feat at least once a year for the next fifty consecutive years.";
+            }
+            if (p.includes('drown') || p.includes('tragedy') || p.includes('1918') || p.includes('cramp') || p.includes('ralph')) {
+                return "A deeply somber day in our chronicles: on July 22, 1918, Ralph Irving Scoville tragically drowned. After a long, hot day harvesting in the hayfields with farmer Sam, Ralph went swimming alone and succumbed to severe muscle cramps. It remains a quiet, historic warning of the lake's power.";
+            }
+            if (p.includes('firework') || p.includes('fiasco') || p.includes('accidental') || p.includes('1930') || p.includes('fourth') || p.includes('july')) {
+                return "Indeed, our traditional Fourth of July fireworks were permanently discontinued in 1931. This was a direct decision following a rather infamous and accidental 'fireworks fiasco' during the summer of 1930. Community safety was rightly prioritized from that point onward.";
+            }
+            if (p.includes('road') || p.includes('access') || p.includes('driveway') || p.includes('path') || p.includes('1923')) {
+                return "In our earliest years, reaching the water meant taking a simple walking path through farmer Sam's active active barnyard pastures. That changed completely in 1923, when our very first dedicated access road—the very approach we drive on today—was finally completed.";
+            }
+            if (p.includes('bylaw') || p.includes('dues') || p.includes('limit') || p.includes('30') || p.includes('member')) {
+                return "Our original 1910 bylaws set high standards! Active voting membership was strictly capped at 30 year-round resident families, with summer residents joining as associate members. Dues were just $5 per year. The original five founders were honored as charter members, completely exempt from all dues.";
+            }
+            if (p.includes('tennis') || p.includes('court') || p.includes('1937')) {
+                return "While tennis courts were enthusiastically proposed in 1927, patience was a virtue back then. It took ten full years of planning and action before the courts were finally constructed and opened to our members in 1937.";
+            }
+            if (p.includes('lifeguard') || p.includes('gray') || p.includes('1927')) {
+                return "Safety at the waterfront was formally established in 1927, when Ed Gray was hired as the Association's very first lifeguard. His watchful eyes initiated our century-long tradition of safe swimming.";
+            }
+            if (p.includes('sand') || p.includes('beach') || p.includes('castle') || p.includes('1928')) {
+                return "Lakeside recreation was elevated in 1928, when the first 'imported' beach sand was brought in. This beautifully designated spot became the perfect playground for building elaborate, nostalgic sandcastles.";
+            }
+            if (p.includes('plumb') || p.includes('toilet') || p.includes('telephone') || p.includes('lights') || p.includes('1933') || p.includes('1930')) {
+                return "Modern infrastructure arrived in waves! Our first electric lights illuminated the grounds in 1930. Just three years later, in 1933, the grounds were officially updated with our first indoor plumbing facilities and our first lakeside telephone line.";
+            }
+            
+            // Standard fallback response
+            return "I've turned the pages of our chronicle books, but that particular query remains hidden. Ask me about our 1891 founders, the Saturday Teas, the 1930 fireworks incident, our old house rules, or early milestones!";
+        }
+
+        // Gemini AI Archivist Integration with Robust Local Fallback
         async function askArchivist() {
             const promptInput = document.getElementById('ai-prompt');
             const prompt = promptInput.value.trim();
@@ -507,6 +551,18 @@ Rules for response:
             askBtn.disabled = true;
             askBtn.classList.add('opacity-70');
 
+            // 1. If API Key is empty, use the high-quality local fallback instantly with a simulated natural delay
+            if (!apiKey) {
+                setTimeout(() => {
+                    const fallbackReply = getLocalResponse(prompt);
+                    responseText.innerHTML = fallbackReply.replace(/\n/g, '<br>');
+                    askBtn.disabled = false;
+                    askBtn.classList.remove('opacity-70');
+                }, 850);
+                return;
+            }
+
+            // 2. Otherwise, attempt to consult the live Gemini model
             const payload = {
                 contents: [{ parts: [{ text: prompt }] }],
                 systemInstruction: { parts: [{ text: SYSTEM_PROMPT }] }
@@ -514,7 +570,6 @@ Rules for response:
 
             const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
-            // Exponential backoff mechanism
             const maxRetries = 5;
             let attempt = 0;
             let success = false;
@@ -537,26 +592,28 @@ Rules for response:
                 } catch (error) {
                     attempt++;
                     if (attempt >= maxRetries) {
-                        responseText.innerHTML = `<span class="text-red-400">The archives are currently closed. Please try again.</span>`;
+                        // Safe recovery: fall back to local responses if the network or key fails entirely
+                        const fallbackReply = getLocalResponse(prompt);
+                        responseText.innerHTML = fallbackReply.replace(/\n/g, '<br>');
                         askBtn.disabled = false;
                         askBtn.classList.remove('opacity-70');
                         return;
                     }
-                    const delay = Math.pow(2, attempt) * 500; // 1s, 2s, 4s, 8s...
+                    const delay = Math.pow(2, attempt) * 500;
                     await new Promise(resolve => setTimeout(resolve, delay));
                 }
             }
 
-            // Extract and format text safely
+            // Extract text from Gemini or fall back if empty structure
             try {
                 const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
                 if (text) {
                     responseText.innerHTML = text.replace(/\n/g, '<br>');
                 } else {
-                    responseText.innerHTML = "I couldn't locate details on that particular inquiry in our chronicle books.";
+                    responseText.innerHTML = getLocalResponse(prompt).replace(/\n/g, '<br>');
                 }
             } catch (e) {
-                responseText.innerHTML = "An unexpected reading error occurred. Please try again.";
+                responseText.innerHTML = getLocalResponse(prompt).replace(/\n/g, '<br>');
             }
 
             // Re-enable button
