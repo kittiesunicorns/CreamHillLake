@@ -71,6 +71,30 @@
           <i class="ti ti-forms" aria-hidden="true"></i>
           <span>Nomination form</span>
         </a>
+        <a href="billing.html" class="quick-card">
+          <i class="ti ti-receipt" aria-hidden="true"></i>
+          <span>Billing &amp; payments</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- UPDATES -->
+    <div class="section">
+      <div class="section-title">Updates</div>
+      <div class="event-list">
+
+        <div class="event-item" style="align-items: flex-start;">
+          <div style="background: var(--amber); border-radius: var(--radius-md); padding: 6px 10px; min-width: 52px; flex-shrink: 0; text-align: center;">
+            <i class="ti ti-bell" style="color: #fff; font-size: 20px;" aria-hidden="true"></i>
+          </div>
+          <div class="event-info">
+            <h3>Reminder: No dogs on the beach or dock</h3>
+            <p>Dogs are not permitted on the beach or dock during swimming hours. Please plan accordingly.</p>
+          </div>
+        </div>
+
+        <!-- Add future updates here — copy the event-item block above -->
+
       </div>
     </div>
 
@@ -78,7 +102,6 @@
     <div class="section">
       <div class="section-title">Flyers &amp; announcements</div>
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; margin-top: 0.5rem;">
-
         <div style="border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; background: var(--green-mist);">
           <a href="smack-flyer.png" target="_blank">
             <img src="smack-flyer.png" alt="SMACK at the Lake — Spring Mixer and Court Kick-Off, Saturday June 6th 2–5pm" style="width: 100%; display: block;" />
@@ -87,52 +110,204 @@
             SMACK at the Lake · Jun 6
           </div>
         </div>
-
-        <!-- Add more flyers here — copy the block above, drop the image in members/, update src and alt -->
-
+        <!-- Add more flyers: copy block above, drop image in members/, update src and alt -->
       </div>
     </div>
 
-     <!-- CALENDAR -->
+    <!-- CALENDAR -->
     <div class="section">
       <div class="section-title">Club calendar</div>
       <div style="overflow: hidden; border-radius: var(--radius-lg); border: 1px solid var(--border);">
         <iframe src="https://calendar.google.com/calendar/embed?src=c_ec3292b61c1299054d7e3e3a018dc047b42b4ce0bb960851d5b68d7886894177%40group.calendar.google.com&ctz=America%2FNew_York&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0"
-          style="border: none; width: 100%; height: 500px; display: block;"
+          style="border: none; width: 100%; height: 320px; display: block;"
           title="CHLA Club Calendar"
           loading="lazy">
         </iframe>
       </div>
     </div>
 
-   
+    <!-- BILLING TEASER -->
+    <div class="section">
+      <div class="section-title">Billing &amp; payments</div>
+      <p class="section-intro">Annual dues are $1,085 (including tax and mortgage assessment). Members are billed in January and November.</p>
+      <a href="billing.html" style="display: inline-flex; align-items: center; gap: 8px; background: var(--green-dark); color: #fff; padding: 10px 20px; border-radius: var(--radius-md); font-size: 14px; font-weight: 600; text-decoration: none; margin-top: 0.5rem;">
+        <i class="ti ti-receipt" aria-hidden="true"></i> View full billing &amp; payment details
+      </a>
+    </div>
+
+    <!-- COMMITTEES -->
+    <div class="section">
+      <div class="section-title">Committees</div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            <span><i class="ti ti-hammer" style="margin-right:8px; color: var(--green-soft);" aria-hidden="true"></i>Building &amp; Grounds</span>
+            <i class="ti ti-chevron-down faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p style="margin-bottom: 0.5rem;"><strong>Chair:</strong> Ronnie Lizana &nbsp;|&nbsp; <strong>Members:</strong> Jeff Ward, Noah Noyes, Joe DoRocco, Chris Sampson, Josh Tyson, Dana Saccardi, Phill West, Susan Saccardi, Todd Lunderborg</p>
+            <ul style="padding-left: 1.25rem; line-height: 2;">
+              <li>Develop and follow a maintenance checklist — driveway, beach, buildings, seasonal setup and teardown.</li>
+              <li>Weekly check-in with staff to adjust the upcoming week's schedule.</li>
+              <li>Provide a yearly repairs list to the Executive Committee by November 1.</li>
+              <li>Coordinate Clean-Up Day with House Operations.</li>
+              <li>Provide contractor suggestions and cost estimates for lawn, driveway, building, and court maintenance.</li>
+              <li>Hire approved contractors and supervise their work.</li>
+              <li>Develop a 5-year capital plan for major improvements.</li>
+              <li>Report to membership at the Preliminary and Annual Meetings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            <span><i class="ti ti-users" style="margin-right:8px; color: var(--green-soft);" aria-hidden="true"></i>Nominating</span>
+            <i class="ti ti-chevron-down faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p style="margin-bottom: 0.5rem;"><strong>Chair:</strong> Dan Horan &nbsp;|&nbsp; <strong>Members:</strong> Martha Bruehl, Elizabeth England, Eileen Gargan, Phill West, Ingrid Ellen, David Cavalier</p>
+            <ul style="padding-left: 1.25rem; line-height: 2;">
+              <li>Prepares a slate of Officers and Executive Committee members.</li>
+              <li>Presents the slate at the Preliminary Meeting.</li>
+              <li>Must have at least 5 members, one of whom is on the Executive Committee.</li>
+              <li>Reports at the Preliminary and Annual Meetings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            <span><i class="ti ti-id-badge" style="margin-right:8px; color: var(--green-soft);" aria-hidden="true"></i>Membership</span>
+            <i class="ti ti-chevron-down faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p style="margin-bottom: 0.5rem;"><strong>Chair:</strong> Susie Ott &nbsp;|&nbsp; <strong>Members:</strong> Heather Abrams, Ingrid Ellen, Jacque Schiller, Bente Busby</p>
+            <ul style="padding-left: 1.25rem; line-height: 2;">
+              <li>Gathers nomination letters and reviews applications each spring.</li>
+              <li>Submits approved applications to the Secretary.</li>
+              <li>Must have at least 5 members. May not sponsor or second nominations.</li>
+              <li>Meets membership nominees as part of the application process.</li>
+              <li>Helps monitor guest and non-member use of CHLA.</li>
+              <li>Reports at the Preliminary and Annual Meetings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            <span><i class="ti ti-waves" style="margin-right:8px; color: var(--green-soft);" aria-hidden="true"></i>Waterfront</span>
+            <i class="ti ti-chevron-down faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p style="margin-bottom: 0.5rem;"><strong>Co-Chairs:</strong> Annette Doskow, Katherine Scoville</p>
+            <ul style="padding-left: 1.25rem; line-height: 2;">
+              <li>Coordinates lifeguard hiring — advertising, interviewing, certification, and scheduling.</li>
+              <li>Creates and manages waterfront safety policies; communicates them to staff and members.</li>
+              <li>Develops annual equipment budget; submits supply needs to the Executive Committee.</li>
+              <li>Supervises lifeguards daily; evaluates mid-season; oversees end-of-season cleanup.</li>
+              <li>Serves as member liaison for waterfront safety questions.</li>
+              <li>Coordinates with Building &amp; Grounds for waterfront needs and hazard remediation.</li>
+              <li>Reports at the Preliminary and Annual Meetings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            <span><i class="ti ti-ball-tennis" style="margin-right:8px; color: var(--green-soft);" aria-hidden="true"></i>Tennis</span>
+            <i class="ti ti-chevron-down faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p style="margin-bottom: 0.5rem;"><strong>Chair:</strong> Kate Green &nbsp;|&nbsp; <strong>Members:</strong> Jane Barnet, Ben Lesch, Tory Estern Jadow, Joyce Keisman, Todd Piker, Shoshana Pinedo, Eileen Gargan</p>
+            <ul style="padding-left: 1.25rem; line-height: 2;">
+              <li>Plans and oversees all tennis programming — lessons, clinics, doubles, tournaments, round robins, mixers, and inter-clubs.</li>
+              <li>Runs the end-of-summer tournament and procures trophies.</li>
+              <li>Coordinates with Building &amp; Grounds for court maintenance and with Entertainment for event refreshments.</li>
+              <li>Coordinates volunteers for seasonal court setup and teardown (nets, windscreens, awning).</li>
+              <li>Manages the court reservation program.</li>
+              <li>Reviews and recommends updates to tennis rules.</li>
+              <li>Reports at the Preliminary and Annual Meetings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            <span><i class="ti ti-confetti" style="margin-right:8px; color: var(--green-soft);" aria-hidden="true"></i>Entertainment</span>
+            <i class="ti ti-chevron-down faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p style="margin-bottom: 0.5rem;"><strong>Co-Chairs:</strong> Melissa Silvetti, Kate Ward &nbsp;|&nbsp; <strong>Members:</strong> Eiseley Kotchoubey, Kate Reynolds</p>
+            <ul style="padding-left: 1.25rem; line-height: 2;">
+              <li>Plans and oversees social, culinary, and educational programming.</li>
+              <li>Schedules events in coordination with the Executive Committee, Waterfront, and Tennis.</li>
+              <li>Organizes paid staff or volunteers for each event; maintains a tent committee.</li>
+              <li>Purchases event supplies; coordinates sign-ups with the Secretary/Treasurer.</li>
+              <li>Reports at the Preliminary and Annual Meetings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            <span><i class="ti ti-home" style="margin-right:8px; color: var(--green-soft);" aria-hidden="true"></i>House Operations</span>
+            <i class="ti ti-chevron-down faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p style="margin-bottom: 0.5rem;"><strong>Chair:</strong> <em>Vacant — volunteers welcome!</em></p>
+            <ul style="padding-left: 1.25rem; line-height: 2;">
+              <li>Hires and supervises housekeeping staff.</li>
+              <li>Maintains Lost &amp; Found and disposes of unclaimed items regularly.</li>
+              <li>Keeps the supply closet stocked with cleaning supplies, paper goods, and soap.</li>
+              <li>Maintains the ping pong table and equipment.</li>
+              <li>Coordinates Clean-Up Day with Building &amp; Grounds.</li>
+              <li>Maintains bulletin boards; monitors kitchen and building cleanliness.</li>
+              <li>Makes recommendations for Clubhouse purchases to the Executive Committee.</li>
+              <li>Reports at the Preliminary and Annual Meetings.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+            <span><i class="ti ti-chart-bar" style="margin-right:8px; color: var(--green-soft);" aria-hidden="true"></i>Finance</span>
+            <i class="ti ti-chevron-down faq-icon" aria-hidden="true"></i>
+          </button>
+          <div class="faq-a">
+            <p style="margin-bottom: 0.5rem;"><strong>Chair:</strong> Todd Lunderborg &nbsp;|&nbsp; <strong>Members:</strong> Caspar Luard, Julie Beglin, Spencer Compton, Alison Schweizer, Jim Stewart</p>
+            <ul style="padding-left: 1.25rem; line-height: 2;">
+              <li>Drafts the annual operating budget for Executive Committee approval.</li>
+              <li>Considers future operating and capital financial needs; recommends plans to the Executive Committee.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
     <!-- DOCUMENTS -->
     <div class="section">
-      <div class="section-title">Documents (Coming soon)</div>
+      <div class="section-title">Documents <span style="font-size:12px; font-weight:400; color: var(--text-muted);">(coming soon)</span></div>
       <div class="event-list">
-
         <div class="event-item">
           <div class="event-info">
             <h3><i class="ti ti-file-text" style="font-size:15px; vertical-align:-2px; margin-right:6px; color: var(--green-soft);" aria-hidden="true"></i>Annual meeting minutes</h3>
             <p>Minutes from the 2024 and 2025 annual meetings</p>
           </div>
         </div>
-
         <div class="event-item">
           <div class="event-info">
             <h3><i class="ti ti-file-text" style="font-size:15px; vertical-align:-2px; margin-right:6px; color: var(--green-soft);" aria-hidden="true"></i>Treasurer's report</h3>
             <p>Most recent financial summary</p>
           </div>
         </div>
-
         <div class="event-item">
           <div class="event-info">
             <h3><i class="ti ti-file-text" style="font-size:15px; vertical-align:-2px; margin-right:6px; color: var(--green-soft);" aria-hidden="true"></i>Membership directory</h3>
             <p>Current member list — please keep this confidential</p>
           </div>
         </div>
-
       </div>
     </div>
 
@@ -151,6 +326,21 @@
       &middot; <a href="tel:+18606726750">(860) 672-6750</a>
     </div>
   </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.faq-q').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.classList.remove('open');
+      });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        answer.classList.add('open');
+      }
+    }
+  </script>
 
 </body>
 </html>
