@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association Bylaws - Cream Hill Lake Association</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cinzel', 'Georgia', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        lake: {
+                            50: '#f4f9f6',
+                            100: '#e3f0e9',
+                            200: '#c8e2d4',
+                            600: '#2d6a4f',
+                            700: '#1b4332',
+                            800: '#132a20',
+                            900: '#08140f',
+                        },
+                        cream: {
+                            50: '#fdfbf7',
+                            100: '#f7f3e9',
+                            200: '#eddcb9',
+                            300: '#e1ca96',
+                            400: '#d2b474',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f7f3e9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2d6a4f;
+            border-radius: 3px;
+        }
+        /* Live Search Highlight styling */
+        .search-highlight {
+            background-color: #fde047; /* Yellow-300 */
+            color: #08140f;
+            font-weight: 600;
+            padding: 0.1rem 0.2rem;
+            border-radius: 0.25rem;
+        }
+        /* Print style rules */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-full-width {
+                width: 100% !important;
+                max-width: 100% !important;
+                grid-column: span 12 / span 12 !important;
+            }
+            .bylaws-card {
+                border: none !important;
+                box-shadow: none !important;
+                padding: 0 !important;
+                margin-bottom: 2rem !important;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="bg-cream-50 text-lake-900 font-sans min-h-screen selection:bg-lake-100 selection:text-lake-800">
+
+    <!-- Print View Banner -->
+    <div id="print-banner" class="hidden no-print bg-lake-800 text-cream-100 px-4 py-2.5 text-xs text-center font-medium flex items-center justify-center space-x-2">
+        <span>Currently in <strong>Print-Friendly View Mode</strong>. Press standard print shortcut (Ctrl+P / Cmd+P) to print or export.</span>
+        <button onclick="togglePrintView()" class="underline text-cream-200 hover:text-cream-50 font-bold ml-2">Exit Mode</button>
+    </div>
+
+    <!-- Header Navigation Section -->
+    <header class="no-print border-b border-cream-200 bg-cream-50/90 backdrop-blur sticky top-0 z-40 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- Custom Pine Tree Logo -->
+                <svg class="w-9 h-9 text-lake-600" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 15L75 55H25L50 15Z" fill="currentColor" opacity="0.85"/>
+                    <path d="M50 35L85 80H15L50 35Z" fill="currentColor" opacity="0.5"/>
+                    <path d="M10 85H90" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+                <div>
+                    <span class="font-serif text-base sm:text-lg font-bold tracking-wider text-lake-700 block leading-tight">CREAM HILL LAKE</span>
+                    <span class="text-[10px] uppercase tracking-widest text-lake-600/80 font-semibold block">Association Constitution & Bylaws</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center space-x-3">
+                <a href="index.html" class="text-xs font-semibold uppercase tracking-wider text-lake-700 hover:text-lake-600 border border-lake-700/20 px-4 py-2.5 rounded-full hover:bg-lake-50 transition duration-150">
+                    <span>View History</span>
+                </a>
+                <a href="https://creamhilllake.org" class="hidden sm:inline-flex items-center space-x-1.5 text-xs font-semibold uppercase tracking-wider text-lake-600 hover:text-lake-700">
+                    <span>Main Site</span>
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        
+        <!-- Header Banner Section -->
+        <div class="text-center md:text-left border-b border-cream-200 pb-8 mb-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-xs uppercase tracking-widest text-lake-600 font-bold">Official Document</span>
+                    <h1 class="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight text-lake-700 mt-1">Association Bylaws</h1>
+                    <p class="text-sm text-lake-900/60 mt-2 max-w-2xl font-light">
+                        Cream Hill Lake Association, Incorporated. Constitutional rules governing membership rights, nominations, dues structure, executive offices, and asset preservation.
+                    </p>
+                </div>
+                <!-- Interactive Action Buttons -->
+                <div class="no-print flex flex-wrap gap-2.5 justify-center md:justify-end">
+                    <button onclick="togglePrintView()" class="inline-flex items-center space-x-1.5 text-xs font-bold uppercase tracking-wider bg-white text-lake-700 border border-cream-300 hover:border-lake-600 px-4 py-2.5 rounded-xl shadow-sm hover:shadow transition duration-150">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
+                        <span id="print-btn-text">Print View</span>
+                    </button>
+                    <button onclick="window.print()" class="inline-flex items-center space-x-1.5 text-xs font-bold uppercase tracking-wider bg-lake-600 hover:bg-lake-700 text-cream-50 px-4 py-2.5 rounded-xl shadow transition duration-150">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        <span>Download PDF</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Utility Search Bar Row -->
+        <div class="no-print bg-white rounded-2xl border border-cream-200 p-4 sm:p-5 mb-8 shadow-sm flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+            <div class="flex items-center space-x-2.5">
+                <div class="p-2 bg-lake-50 rounded-xl text-lake-600">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                </div>
+                <div>
+                    <span class="text-sm font-bold text-lake-800 block leading-tight">Interactive Code Explorer</span>
+                    <span class="text-[10px] text-lake-900/50 block">Search by keywords or hop down to individual articles</span>
+                </div>
+            </div>
+
+            <!-- In-Doc Live Keyword Search -->
+            <div class="relative flex-1 max-w-md">
+                <input type="text" id="bylaws-search" oninput="searchBylaws()" placeholder="Type keywords (e.g., 'dues', 'Emeritus', 'votes')..." class="w-full pl-9 pr-8 py-2.5 text-xs sm:text-sm bg-cream-50 border border-cream-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-lake-600 focus:border-transparent text-lake-900 placeholder-lake-600/40">
+                <div class="absolute left-3 top-3 text-lake-600/40">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <button onclick="clearSearch()" id="clear-search-btn" class="hidden absolute right-3 top-3 text-lake-600/50 hover:text-lake-700">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            <!-- Left Side: Table of Contents Navigation (3 Columns) -->
+            <aside class="no-print lg:col-span-3 sticky top-28 space-y-4 hidden lg:block">
+                <div class="bg-white rounded-2xl border border-cream-200 p-5 shadow-sm">
+                    <h3 class="font-serif text-sm font-bold uppercase tracking-wider text-lake-700 mb-4 pb-2 border-b border-cream-100">Index Table</h3>
+                    <nav class="space-y-1 text-xs font-semibold" id="bylaws-nav">
+                        <a href="#article-i" class="nav-link block px-3 py-2 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg transition">Article I: Name</a>
+                        <a href="#article-ii" class="nav-link block px-3 py-2 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg transition">Article II: Objects</a>
+                        <a href="#article-iii" class="nav-link block px-3 py-2 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg transition">Article III: Membership</a>
+                        <a href="#article-iv" class="nav-link block px-3 py-2 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg transition">Article IV: Nomination</a>
+                        <a href="#article-v" class="nav-link block px-3 py-2 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg transition">Article V: Guests</a>
+                        <a href="#article-vi" class="nav-link block px-3 py-2 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg transition">Article VI: Dues & Fees</a>
+                        <a href="#article-vii" class="nav-link block px-3 py-2 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg transition">Article VII: Executive Officers</a>
+                        <a href="#article-viii" class="nav-link block px-3 py-2 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg transition">Article VIII: Meetings</a>
+                        <a href="#article-ix" class="nav-link block px-3 py-2 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg transition">Article IX: Quorums & Amend</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Right Side: Beautiful Legislative Documents Content (9 Columns) -->
+            <div class="print-full-width lg:col-span-9 space-y-10" id="bylaws-content">
+                
+                <!-- Search Feedback Status -->
+                <div id="search-status" class="hidden no-print bg-emerald-50 border border-emerald-200/60 rounded-xl p-4 text-xs font-semibold text-emerald-800 animate-fade-in mb-6">
+                    <span id="search-status-text">Matched instances found. Scroll below to view highlighted items.</span>
+                </div>
+
+                <!-- ARTICLE I -->
+                <section id="article-i" class="bylaws-card bg-white rounded-3xl border border-cream-200 p-6 sm:p-8 shadow-sm space-y-4">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-cream-100">
+                        <span class="font-serif text-sm font-bold uppercase text-lake-600">Article I</span>
+                        <div class="h-px bg-cream-200 flex-1"></div>
+                    </div>
+                    <h2 class="font-serif text-xl sm:text-2xl font-bold text-lake-700">Name</h2>
+                    <div class="bylaws-text text-sm sm:text-base text-lake-900/80 leading-relaxed font-light pl-1">
+                        The Organization shall be known as the <strong class="font-bold text-lake-800">Cream Hill Lake Association, Incorporated</strong>.
+                    </div>
+                </section>
+
+                <!-- ARTICLE II -->
+                <section id="article-ii" class="bylaws-card bg-white rounded-3xl border border-cream-200 p-6 sm:p-8 shadow-sm space-y-4">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-cream-100">
+                        <span class="font-serif text-sm font-bold uppercase text-lake-600">Article II</span>
+                        <div class="h-px bg-cream-200 flex-1"></div>
+                    </div>
+                    <h2 class="font-serif text-xl sm:text-2xl font-bold text-lake-700">Objects</h2>
+                    <div class="bylaws-text text-sm sm:text-base text-lake-900/80 leading-relaxed font-light pl-1">
+                        The objects of the Association shall be the preservation of the natural beauty of Cream Hill Lake, the maintenance of a clubhouse for its members, and the furnishing to them of facilities for boating, bathing, tennis and other suitable amusement.
+                    </div>
+                </section>
+
+                <!-- ARTICLE III -->
+                <section id="article-iii" class="bylaws-card bg-white rounded-3xl border border-cream-200 p-6 sm:p-8 shadow-sm space-y-5">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-cream-100">
+                        <span class="font-serif text-sm font-bold uppercase text-lake-600">Article III</span>
+                        <div class="h-px bg-cream-200 flex-1"></div>
+                    </div>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                        <h2 class="font-serif text-xl sm:text-2xl font-bold text-lake-700">Membership</h2>
+                        <span class="no-print inline-flex items-center px-2.5 py-1 bg-lake-50 text-lake-700 border border-lake-100 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                            200 Membership Cap
+                        </span>
+                    </div>
+
+                    <!-- Bylaws Sub-clauses -->
+                    <div class="space-y-4 text-sm sm:text-base text-lake-900/80 leading-relaxed font-light">
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">3.1.</span>
+                            <p class="bylaws-text">
+                                A membership in the Association shall be open to an individual eighteen years of age or older, or two such individuals who generally reside together throughout the year, provided that "dwelling in Cornwall" and other requirements of membership as may be specified by these bylaws are met. Each individual is a member of the Association for purposes of these bylaws.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">3.2.</span>
+                            <div class="bylaws-text flex-1">
+                                For purposes of these bylaws, "dwelling in Cornwall" shall mean that at least one member of the membership:
+                                <ul class="list-none pl-4 mt-2 space-y-1 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a)</span> <span>is a full-time Cornwall resident, or</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b)</span> <span>owns a dwelling in Cornwall for personal use, or</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">c)</span> <span>physically occupies a dwelling in Cornwall for at least 60 days during the calendar year.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">3.3.</span>
+                            <p class="bylaws-text">
+                                Each member shall enjoy, subject to these bylaws and other rules of the Association, all privileges of and obligations to the Association, including one vote at meetings of the Association.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">3.4.</span>
+                            <div class="bylaws-text flex-1">
+                                The privileges of the Association, subject to the conditions below, shall be extended to members' children 25 years of age or under and, at the discretion of the member(s), to an "extended family unit" which may include such individuals as a member's children over the age of 25, and their spouses, children, and other descendants. All such persons shall be identified to the Secretary of the Association. Individuals to whom such privileges are extended:
+                                <ul class="list-none pl-4 mt-2 space-y-1.5 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a)</span> <span>shall dwell with the member when in Cornwall,</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b)</span> <span>may, collectively for the "extended family unit," if it includes individuals over the age of 25, exercise one additional vote at meetings of the Association beyond those of the member(s) comprising the underlying membership, and</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">c)</span> <span>may not hold elective office, chair committees, or serve on the Executive, Membership, or Nominating committees established in these bylaws.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">3.5.</span>
+                            <p class="bylaws-text">
+                                If the individuals comprising a two-person membership divorce or permanently separate, both parties may continue as members under the original membership, paying one set of dues and assessments for the remainder of the calendar year in which the separation occurs. At the end of the calendar year, the membership shall end. However, if the membership ended in good standing, each of the separated parties who continues to meet the requirements of membership, upon submitting a written request to the Secretary before May 1 of the calendar year immediately following the year of separation, may be admitted to membership immediately without payment of an initiation fee.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">3.6.</span>
+                            <p class="bylaws-text">
+                                The total number of memberships in the Association shall be <span class="font-bold text-lake-700">200</span>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ARTICLE IV -->
+                <section id="article-iv" class="bylaws-card bg-white rounded-3xl border border-cream-200 p-6 sm:p-8 shadow-sm space-y-5">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-cream-100">
+                        <span class="font-serif text-sm font-bold uppercase text-lake-600">Article IV</span>
+                        <div class="h-px bg-cream-200 flex-1"></div>
+                    </div>
+                    <h2 class="font-serif text-xl sm:text-2xl font-bold text-lake-700">Nomination and Admission to Membership</h2>
+                    
+                    <div class="space-y-4 text-sm sm:text-base text-lake-900/80 leading-relaxed font-light">
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.1.</span>
+                            <p class="bylaws-text">
+                                A nomination for membership shall be made in writing to the Secretary by a member of the Association, and seconded in writing by three other members, all of whom shall have been members for at least two years. The nominating and seconding letters shall not be form letters and shall state the full name or names, addresses, and telephone numbers of the nominee, the length of time that the writer has known the nominee, and describe the nominee's family. The letter shall also explain how the nominee meets the requirements of membership, and shall explain why, in the opinion of the writer, the nominee is personally responsible and compatible with the membership of the Association. In addition, it shall be the responsibility of the nominator to introduce the proposed members to the chair and at least one other member of the Membership Committee before the Committee acts on the nomination, and to assure that the application is completed. A nomination is complete after all required letters have been filed with the Secretary and the introductions to the members of the Membership Committee have been made.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.2.</span>
+                            <p class="bylaws-text">
+                                A member may sponsor, either nominating or seconding, one nomination for membership in a calendar year.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.3.</span>
+                            <p class="bylaws-text">
+                                Members of the Membership Committee shall not nominate or second nominations for membership.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.4.</span>
+                            <p class="bylaws-text">
+                                A nomination for membership may be filed with the Secretary at any time of the year. The Membership Committee shall act on nominations in the order in which they are completed. An approved nomination shall be placed on the waiting list.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.5.</span>
+                            <p class="bylaws-text">
+                                To fill vacancies, the Secretary shall extend an invitation to those approved for membership in the order that they appear on the waiting list, subject to paragraph 4.8. Names on the waiting list shall be kept in the order that they were approved by the Membership Committee.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.6.</span>
+                            <p class="bylaws-text">
+                                The Secretary shall extend invitations in writing to join the membership. Invitations shall be subject to the condition that invitees meet the requirements of membership at the time of the invitation. Invitations to invitees who do not meet the requirements of membership shall be void. Subsequent consideration of such invitees shall be made only after a new nomination has been filed.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.7.</span>
+                            <div class="bylaws-text flex-1">
+                                When a nomination involves a child of an individual who has been a member for the last ten years and whose membership is currently in good standing, two one-time exceptions shall be made to the nomination and admission process:
+                                <ul class="list-none pl-4 mt-2 space-y-1 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a)</span> <span>The seconding requirement shall be waived.</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b)</span> <span>The initiation fee shall be 1/2 the normal fee.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.8.</span>
+                            <p class="bylaws-text">
+                                When a membership ends due to death, any children of that membership who are nominated within twelve months of the end of the membership and who meet all requirements of membership, shall be extended an invitation to join the Association, notwithstanding the limitation on the number of memberships.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.9.</span>
+                            <p class="bylaws-text">
+                                If an invitee to join the membership shall fail to pay such dues, initiation fees, and assessments as may be payable on admission to membership within 45 days after written notification of admission, the invitation to join the membership shall be void. Subsequent consideration of such invitee shall be made only after a new nomination has been filed. In extraordinary circumstances, these provisions may be waived by a three-quarters vote of the full Executive Committee.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.10.</span>
+                            <div class="bylaws-text flex-1">
+                                If all the individuals comprising a membership are 70 years of age or older, and the membership has been in good standing for at least twenty years and continues to meet the requirements of membership, the membership may apply to be an Emeritus Member. Emeritus Members shall enjoy the same privileges and obligations as members, except that they shall not be charged Basic Dues and Assessments, and participation in the affairs of the Association shall be limited as follows:
+                                <ul class="list-none pl-4 mt-2 space-y-1.5 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a)</span> <span>They may not hold elective office, chair committees, serve on the Executive, Membership or Nominating committees established in these bylaws.</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b)</span> <span>They may not sponsor, nominate or second, nominations for membership.</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">c)</span> <span>They may not vote at meetings of the Association.</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">d)</span> <span>They may not extend the privileges of the Association to their "extended family unit."</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.11.</span>
+                            <p class="bylaws-text">
+                                An individual's membership may be terminated by the Association for cause, and after having been given an opportunity for a hearing before the Executive Committee, by a vote of three-fourths of the entire Executive Committee. Cause for expulsion shall consist, in the Executive Committee's final judgment, of conduct seriously detrimental to the best interests of the Association.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.12.</span>
+                            <p class="bylaws-text">
+                                A membership may be resigned on written notice to the Secretary. A member shall be regarded as having resigned in good standing if all dues and other appropriate charges, have been paid in full and any other obligations that may exist at the time of resignation have been met.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">4.13.</span>
+                            <p class="bylaws-text">
+                                The Executive Committee, with the assistance of the Membership Committee, shall review the Association's membership list yearly, and shall terminate any membership that does not meet the membership requirements for 24 consecutive months. The provisions of this paragraph shall not apply to memberships of the Association that, as of September 1, 1996, do not meet the "dwelling in Cornwall" requirement, and have been a membership in good standing for at least five years.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ARTICLE V -->
+                <section id="article-v" class="bylaws-card bg-white rounded-3xl border border-cream-200 p-6 sm:p-8 shadow-sm space-y-4">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-cream-100">
+                        <span class="font-serif text-sm font-bold uppercase text-lake-600">Article V</span>
+                        <div class="h-px bg-cream-200 flex-1"></div>
+                    </div>
+                    <h2 class="font-serif text-xl sm:text-2xl font-bold text-lake-700">Guests</h2>
+                    <div class="bylaws-text text-sm sm:text-base text-lake-900/80 leading-relaxed font-light pl-1">
+                        Members and Emeritus Members may extend the use of the facilities of the Association to their guests under rules promulgated by the Executive Committee. These rules shall not limit the number of times that a member's children over the age of 25, and their spouses, children, and other descendants may be a guest.
+                    </div>
+                </section>
+
+                <!-- ARTICLE VI -->
+                <section id="article-vi" class="bylaws-card bg-white rounded-3xl border border-cream-200 p-6 sm:p-8 shadow-sm space-y-5">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-cream-100">
+                        <span class="font-serif text-sm font-bold uppercase text-lake-600">Article VI</span>
+                        <div class="h-px bg-cream-200 flex-1"></div>
+                    </div>
+                    <h2 class="font-serif text-xl sm:text-2xl font-bold text-lake-700">Dues, Fees, and Assessments</h2>
+                    
+                    <div class="space-y-4 text-sm sm:text-base text-lake-900/80 leading-relaxed font-light">
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">6.1.</span>
+                            <div class="bylaws-text flex-1">
+                                The annual membership dues of the Association shall be as follows:
+                                <ul class="list-none pl-4 mt-2 space-y-1.5 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a) Basic Dues</span> <span>(payable by each membership) - $850.00, until changed by the membership from time to time.</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b) Family Dues</span> <span>(payable by a membership for each person 25 years or older included in the membership's extended family unit) - 1/4 the Basic Dues.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">6.2.</span>
+                            <p class="bylaws-text">
+                                The initiation fee for joining the Association shall be a sum equal to four times the Basic Dues.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">6.3.</span>
+                            <p class="bylaws-text">
+                                The fees for guests (with due regard for the dues structure), social events, canoe storage space, and other items shall be fixed by the Executive Committee.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">6.4.</span>
+                            <p class="bylaws-text">
+                                Assessments, to be levied as needed upon memberships of the Association, may be made at any Regular or Special meeting of the Association, the notice of which states that an assessment is to be considered. In addition, the Executive Committee may levy one assessment in any calendar year for unanticipated expenses of up to $50 per membership without vote of the membership.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">6.5.</span>
+                            <div class="bylaws-text flex-1">
+                                Notice of dues, fees, and assessments that are owed shall be sent by the Treasurer and shall be payable as follows:
+                                <ul class="list-none pl-4 mt-2 space-y-1.5 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a)</span> <span>Annual dues and canoe charges shall be billed on March 1st, or on notification of invitation to join the membership, and shall be payable on receipt.</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b)</span> <span>Initiation fees shall be due in full on notification of the invitation to join the membership. However, at the option of the invitee and upon notification of the Treasurer, initiation fees may be paid in four installments: 25% upon acceptance of the invitation to join, and the balance in three equal installments at the time annual dues are payable in the three succeeding years. The provisions of paragraph 4.7 shall apply.</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">c)</span> <span>Assessments shall be payable as specified in the motion establishing them.</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">d)</span> <span>Other charges shall be payable on November 1st or as specified at the time they are established.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">6.6.</span>
+                            <p class="bylaws-text">
+                                The Treasurer shall send second statements two months after a bill is due to memberships who have not paid in full. Following a grace period of 30 days after these second statements are sent out, a surcharge of 10% per month, exclusive of surcharges, shall be levied on all unpaid bills and charges.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">6.7.</span>
+                            <p class="bylaws-text">
+                                If a membership or Emeritus Member fails to pay all bills due and owed by the Preliminary Meeting, the Executive Committee shall terminate the membership or Emeritus Membership status unless special arrangements are made with the Treasurer and President for full payment by November 1 and the Executive Committee approves the arrangement. In extraordinary circumstances, these provisions may be waived by a three-quarters vote of the full Executive Committee. Memberships dropped under the terms of this paragraph may be readmitted only after consideration of a new nomination for membership in the normal manner.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ARTICLE VII -->
+                <section id="article-vii" class="bylaws-card bg-white rounded-3xl border border-cream-200 p-6 sm:p-8 shadow-sm space-y-5">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-cream-100">
+                        <span class="font-serif text-sm font-bold uppercase text-lake-600">Article VII</span>
+                        <div class="h-px bg-cream-200 flex-1"></div>
+                    </div>
+                    <h2 class="font-serif text-xl sm:text-2xl font-bold text-lake-700">Officers, Executive Committee, and Other Committees</h2>
+                    
+                    <div class="space-y-4 text-sm sm:text-base text-lake-900/80 leading-relaxed font-light">
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.1.</span>
+                            <p class="bylaws-text">
+                                The officers of the Association shall be a President, Vice President, Secretary, and Treasurer. They shall be elected at the Annual Meeting for one-year terms, starting October 1st following their election. They shall serve the specified term or until their successors take office. The offices of Secretary and Treasurer may, with the approval of the Executive Committee, be held by the same person; otherwise, no person shall hold more than one office at the same time.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.2.</span>
+                            <div class="bylaws-text flex-1">
+                                The President shall serve no more than two consecutive terms and shall perform the duties usually pertaining to the office. Specifically, the President shall:
+                                <ul class="list-none pl-4 mt-2 space-y-1 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a)</span> <span>preside over all meetings of the Association and of the Executive Committee;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b)</span> <span>serve as an ex officio member of all committees except the Nominating Committee;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">c)</span> <span>authorize the call of regular meetings of the Association and of the Executive Committee;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">d)</span> <span>appoint members of all committees, other than the Executive Committee, after discussion with the committee chairs and subject to the Executive Committee's approval; and</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">e)</span> <span>fill vacancies as may arise among the committees, subject to the Executive Committee's approval.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.3.</span>
+                            <p class="bylaws-text">
+                                The Vice President shall serve no more than two consecutive terms and shall perform the duties usually pertaining to the office and shall perform the duties of the President in the President's absence.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.4.</span>
+                            <div class="bylaws-text flex-1">
+                                The Secretary shall perform the duties usually pertaining to the offices of Secretary, and specifically shall:
+                                <ul class="list-none pl-4 mt-2 space-y-1 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a)</span> <span>ensure that minutes are duly recorded at all meetings of the Association and of the Executive Committee;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b)</span> <span>maintain and distribute annually a current list of Members and Emeritus Members; and</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">c)</span> <span>exercise such authority and perform such additional duties in overseeing the Association's operation as set forth in these bylaws or as may be designated by the Executive Committee, and receive such compensation as the Executive Committee prescribes.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.5.</span>
+                            <div class="bylaws-text flex-1">
+                                The Treasurer shall perform the duties usually pertaining to the office of Treasurer, and specifically shall:
+                                <ul class="list-none pl-4 mt-2 space-y-1 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a)</span> <span>oversee the preparation and distribution of an annual financial report to the membership of the Association;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b)</span> <span>oversee the collection of all dues, fees, and assessments as provided in Article VI, and</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">c)</span> <span>exercise such authority and perform such additional duties as set forth in these bylaws or as may be designated by the Executive Committee, and receive such compensation as the Executive Committee prescribes.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.6.</span>
+                            <p class="bylaws-text">
+                                Officers, on election and until they assume office, shall be designated officers-elect.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.7.</span>
+                            <p class="bylaws-text">
+                                There shall be an Executive Committee, composed of the President, Vice President, Secretary, Treasurer, and five or six other members of the Association, as needed to bring the number of members of the Executive Committee to nine, whose terms shall be staggered to the extent practicable. No person shall be a member of the Executive Committee for more than four consecutive years, except as may result from being an Officer of the Association, or from being asked to serve one additional year to assure the staggering of terms, or from the retiring President's being asked by the Nominating Committee to serve one additional year.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.8.</span>
+                            <div class="bylaws-text flex-1">
+                                The Executive Committee shall, in general, oversee and control the operations and financial affairs of the Association. Specifically, the Executive Committee shall, consistent with the law and these bylaws:
+                                <ul class="list-none pl-4 mt-2 space-y-1.5 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a)</span> <span>meet at such times and places as it shall decide upon, or as called by the President;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b)</span> <span>approve the appointment or removal, and establish the compensation and duties, of such employees as it may deem necessary;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">c)</span> <span>approve the appointment of members to, and specify the duties of, committees;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">d)</span> <span>approve rules of the Association consistent with the bylaws for, among other matters, Guests of the Association and use of the Association's facilities;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">e)</span> <span>maintain a Capital Account, into which initiation fees and appropriate assessments shall be placed, and an Operating Account, into which dues and other fees shall be placed;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">f)</span> <span>designate a bank or banks in which funds of the Association shall be deposited, and determine the manner in which checks, drafts, and other instruments for the payment of funds of the Association shall be executed;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">g)</span> <span>maintain insurance coverage deemed adequate for the Association, such as fire, casualty, liability, and workers compensation;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">h)</span> <span>contract for maintenance, construction, and service as necessary and appropriate for the operation of the Association;</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">i)</span> <span>fill any vacancies among the Officers or Executive Committee, such appointments to last until the next regularly scheduled election; and</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">j)</span> <span>review the Association's Membership List and instruct that letters be issued regarding the termination of memberships that do not meet the membership requirements for 24 consecutive months.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.9.</span>
+                            <p class="bylaws-text">
+                                Nothing in these bylaws shall be construed to permit the Executive Committee to contract for other than normal operational obligations without approval at a duly held Regular or Special meeting of the Association, the call of which has included notification of the intention to incur such obligations, except in the case of an assessment for significant, unanticipated expenses as provided in paragraph 6.4.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.10.</span>
+                            <p class="bylaws-text">
+                                The Officers and members of the Executive Committee shall be elected by majority vote at the Annual Meeting, as provided in paragraphs 7.1 and 7.13.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.11.</span>
+                            <p class="bylaws-text">
+                                There shall be a Membership Committee, a Nominating Committee, a Building and Grounds Committee, and such other committees as the Executive Committee shall deem appropriate.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.12.</span>
+                            <p class="bylaws-text">
+                                The Membership Committee shall be composed of not fewer than five members. The Committee shall act on nominations for membership in the Association and shall present a membership report listing all membership changes at each regular meeting.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.13.</span>
+                            <p class="bylaws-text">
+                                The Nominating Committee shall be composed of not fewer than five members, one, and only one, of whom shall be a member of the Executive Committee. No officer may be a member of the Nominating Committee. After consultation with the President, the Nominating Committee shall prepare a slate of Officers and Executive Committee members that shall be included in the notice to the membership for the Preliminary Meeting. Further nominations may be made only by a petition signed by twenty voting members of the Association, which includes the consent of the person so nominated, that is received by the Secretary no later than August 1. The Secretary shall post the petitions at the clubhouse and shall include in the notice to the membership of the Annual Meeting the slate nominated by the Nominating Committee and any petitions received by August 1.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">7.14.</span>
+                            <p class="bylaws-text">
+                                The Building and Grounds Committee is responsible for identifying and making recommendations to the executive committee for construction, maintenance, and repair work on the CHLA property.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ARTICLE VIII -->
+                <section id="article-viii" class="bylaws-card bg-white rounded-3xl border border-cream-200 p-6 sm:p-8 shadow-sm space-y-5">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-cream-100">
+                        <span class="font-serif text-sm font-bold uppercase text-lake-600">Article VIII</span>
+                        <div class="h-px bg-cream-200 flex-1"></div>
+                    </div>
+                    <h2 class="font-serif text-xl sm:text-2xl font-bold text-lake-700">Meetings</h2>
+                    
+                    <div class="space-y-4 text-sm sm:text-base text-lake-900/80 leading-relaxed font-light">
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">8.1.</span>
+                            <div class="bylaws-text flex-1">
+                                There shall be two regular meetings of the Association, both held at the Association's Clubhouse:
+                                <ul class="list-none pl-4 mt-2 space-y-1.5 text-sm bg-cream-50/50 p-3 rounded-xl border border-cream-200">
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">a) The Preliminary Meeting</span> <span>shall be held on the last Saturday of June, unless otherwise designated by the Executive Committee for stated cause.</span></li>
+                                    <li class="flex items-start space-x-2"><span class="font-bold text-lake-600">b) The Annual Meeting</span> <span>shall be held on the last Saturday of August, unless otherwise designated by the Executive Committee for stated cause.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">8.2.</span>
+                            <p class="bylaws-text">
+                                Notice of any regular meeting shall be mailed to the entire membership at least two but not more than four weeks prior to the meeting.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">8.3.</span>
+                            <p class="bylaws-text">
+                                At regular meetings of the Association, an Executive Committee report, a financial report, and reports of committees shall be heard; and such business shall be transacted as may be appropriate for the Association to consider.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">8.4.</span>
+                            <p class="bylaws-text">
+                                A special meeting may be called by the President or the Executive Committee, or shall be called by the Secretary within thirty days of receipt of a written request to the Secretary for a special meeting signed by twenty voting members of the Association. The notice of a special meeting shall describe the matter or matters to be considered, and shall be mailed to the membership at least two but not more than four weeks prior to the meeting. The business transacted at a special meeting shall be limited to the matters described in the notice of the meeting.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ARTICLE IX -->
+                <section id="article-ix" class="bylaws-card bg-white rounded-3xl border border-cream-200 p-6 sm:p-8 shadow-sm space-y-5">
+                    <div class="flex items-center space-x-2 pb-2 border-b border-cream-100">
+                        <span class="font-serif text-sm font-bold uppercase text-lake-600">Article IX</span>
+                        <div class="h-px bg-cream-200 flex-1"></div>
+                    </div>
+                    <h2 class="font-serif text-xl sm:text-2xl font-bold text-lake-700">Quorums, Amendments, and Interpretations</h2>
+                    
+                    <div class="space-y-4 text-sm sm:text-base text-lake-900/80 leading-relaxed font-light">
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">9.1.a</span>
+                            <p class="bylaws-text">
+                                Forty voting members of the Association shall constitute a quorum at a meeting of the Association for the transaction of any business, except as otherwise provided in these Bylaws.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">9.1.b</span>
+                            <p class="bylaws-text">
+                                For the purpose of considering matters for which an absentee ballot has been provided, a quorum shall constitute forty voting members of the Association, of which at least twenty must be present in person, and twenty voting members may be present by absentee ballot. Any matter to be considered by absentee ballot shall be clearly stated so as to be subject to a "yes" or "no" vote and shall be mailed to the membership not less than thirty days before the meeting, and ballots thus cast shall be received by the Secretary not less than three days before the meeting. Matters presented to the Association for vote by absentee ballot shall be voted up or down without any amendment.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">9.2.</span>
+                            <p class="bylaws-text">
+                                A majority of the Executive Committee shall constitute a quorum at a meeting of the Executive Committee.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">9.3.</span>
+                            <p class="bylaws-text">
+                                These bylaws may be amended, with one exception noted below, at a regular or special meeting of the Association for which the notice of the meeting informed the membership of the subject matter of the proposed change, by an affirmative vote of at least two-thirds of the voting members present, provided the number of voting members present shall be sixty or more, of which at least twenty shall be present in person, and forty may be present by absentee ballot as provided in paragraph 9.1(b). The exception is that a change in the number of memberships in the Association, pursuant to paragraph 3.7 (re-indexed 3.6), shall be made only at a regular meeting of the Association.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">9.4.</span>
+                            <p class="bylaws-text">
+                                The interpretation of these bylaws shall be the responsibility of the Executive Committee, and such interpretations shall be final.
+                            </p>
+                        </div>
+
+                        <div class="flex items-start space-x-3 bylaws-clause">
+                            <span class="font-serif font-bold text-lake-600 text-xs sm:text-sm pt-0.5">9.5.</span>
+                            <p class="bylaws-text">
+                                Enforcement of these bylaws and other rules of the Association is assigned, as appropriate, to the President, the Secretary, the Treasurer, and Executive Committee in order to assure their fair and even-handed application.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Search Unmatched Empty State -->
+                <div id="search-empty-state" class="hidden text-center py-16 bg-white rounded-3xl border border-cream-200 shadow-sm animate-fade-in">
+                    <div class="p-3 bg-cream-100 text-lake-600 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    </div>
+                    <h4 class="font-serif text-lg font-bold text-lake-800">No Clauses Match Search</h4>
+                    <p class="text-xs text-lake-900/50 mt-1.5">We couldn't find matches for "<span id="empty-query-text" class="font-semibold text-lake-800"></span>". Try another legal term or keyword.</p>
+                    <button onclick="clearSearch()" class="mt-4 px-4 py-2 text-xs font-semibold bg-lake-600 text-cream-50 rounded-xl hover:bg-lake-700 transition">Reset Search Filter</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Drawer for Mobile View -->
+    <div class="no-print lg:hidden fixed bottom-6 right-6 z-50">
+        <button onclick="toggleMobileNav()" class="flex items-center justify-center bg-lake-700 text-cream-50 w-12 h-12 rounded-full shadow-lg hover:bg-lake-600 active:scale-95 transition focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+
+    <!-- Mobile Nav Backdrop -->
+    <div id="mobile-nav-backdrop" onclick="toggleMobileNav()" class="hidden fixed inset-0 bg-lake-950/40 backdrop-blur-sm z-40 transition-opacity duration-250"></div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobile-nav-drawer" class="hidden fixed bottom-20 right-6 z-50 w-64 bg-white border border-cream-200 rounded-2xl shadow-xl p-4 animate-fade-in">
+        <h3 class="font-serif text-xs font-bold uppercase tracking-wider text-lake-700 mb-3 pb-1 border-b border-cream-100">Quick Navigation</h3>
+        <nav class="space-y-1 text-xs font-semibold" onclick="toggleMobileNav()">
+            <a href="#article-i" class="block px-3 py-1.5 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg">Article I: Name</a>
+            <a href="#article-ii" class="block px-3 py-1.5 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg">Article II: Objects</a>
+            <a href="#article-iii" class="block px-3 py-1.5 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg">Article III: Membership</a>
+            <a href="#article-iv" class="block px-3 py-1.5 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg">Article IV: Nomination</a>
+            <a href="#article-v" class="block px-3 py-1.5 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg">Article V: Guests</a>
+            <a href="#article-vi" class="block px-3 py-1.5 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg">Article VI: Dues & Fees</a>
+            <a href="#article-vii" class="block px-3 py-1.5 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg">Article VII: Committee/Exec</a>
+            <a href="#article-viii" class="block px-3 py-1.5 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg">Article VIII: Meetings</a>
+            <a href="#article-ix" class="block px-3 py-1.5 text-lake-600 hover:text-lake-700 hover:bg-cream-50 rounded-lg">Article IX: Quorums & Amend</a>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="no-print bg-lake-900 text-cream-200 py-10 mt-16 border-t border-lake-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+            <div>
+                <p class="font-serif text-sm font-bold tracking-wide text-cream-100">Cream Hill Lake Association</p>
+                <p class="text-xs text-cream-200/50 mt-1">Providing safe, orderly, and pristine recreation in Cornwall, Connecticut since 1921.</p>
+            </div>
+            <div class="text-[10px] text-cream-200/40">
+                <p>&copy; 2026 Cream Hill Lake Association. All constitutional rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Functionality -->
+    <script>
+        // Store baseline state of all text nodes inside .bylaws-text elements to ensure pristine clean-ups on search resets
+        let textCache = [];
+        window.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.bylaws-text');
+            elements.forEach((el, index) => {
+                textCache.push({
+                    element: el,
+                    originalHTML: el.innerHTML
+                });
+            });
+        });
+
+        // Toggle mobile drawer
+        function toggleMobileNav() {
+            const drawer = document.getElementById('mobile-nav-drawer');
+            const backdrop = document.getElementById('mobile-nav-backdrop');
+            
+            drawer.classList.toggle('hidden');
+            backdrop.classList.toggle('hidden');
+        }
+
+        // Toggles a beautiful, high-contrast, clean layout tailored specifically for standard printers or PDF export
+        function togglePrintView() {
+            const body = document.body;
+            const printBanner = document.getElementById('print-banner');
+            const printBtnText = document.getElementById('print-btn-text');
+            
+            if (body.classList.contains('print-view')) {
+                body.classList.remove('print-view');
+                printBanner.classList.add('hidden');
+                printBtnText.textContent = "Print View";
+            } else {
+                body.classList.add('print-view');
+                printBanner.classList.remove('hidden');
+                printBtnText.textContent = "Standard View";
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Real-Time In-Document Filtering and Keyword Highlight Engine
+        function searchBylaws() {
+            const queryInput = document.getElementById('bylaws-search');
+            const query = queryInput.value.trim().toLowerCase();
+            const clearBtn = document.getElementById('clear-search-btn');
+            const statusBox = document.getElementById('search-status');
+            const statusText = document.getElementById('search-status-text');
+            const emptyState = document.getElementById('search-empty-state');
+            const emptyQueryText = document.getElementById('empty-query-text');
+
+            // Toggle clear search button visibility
+            if (query.length > 0) {
+                clearBtn.classList.remove('hidden');
+            } else {
+                clearBtn.classList.add('hidden');
+            }
+
+            // Restore elements to original clean state first
+            textCache.forEach(cache => {
+                cache.element.innerHTML = cache.originalHTML;
+            });
+
+            if (!query) {
+                // If query is empty, reveal all sections and reset statuses
+                document.querySelectorAll('.bylaws-card').forEach(card => card.classList.remove('hidden'));
+                statusBox.classList.add('hidden');
+                emptyState.classList.add('hidden');
+                return;
+            }
+
+            let matchesCount = 0;
+            const cards = document.querySelectorAll('.bylaws-card');
+
+            cards.forEach(card => {
+                const textNodes = card.querySelectorAll('.bylaws-text');
+                let cardHasMatches = false;
+
+                textNodes.forEach(node => {
+                    const originalText = node.innerHTML;
+                    
+                    // Regex helper to search for keyword matches while avoiding HTML tags
+                    const regex = new RegExp(`(?![^<>]*>)(${escapeRegExp(query)})`, 'gi');
+                    
+                    if (originalText.toLowerCase().includes(query)) {
+                        cardHasMatches = true;
+                        node.innerHTML = originalText.replace(regex, `<mark class="search-highlight">$1</mark>`);
+                        
+                        // Count occurrences
+                        const matches = originalText.match(regex);
+                        if (matches) {
+                            matchesCount += matches.length;
+                        }
+                    }
+                });
+
+                // Show or hide Article cards depending on whether they contain matches
+                if (cardHasMatches) {
+                    card.classList.remove('hidden');
+                    card.classList.add('animate-fade-in');
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('animate-fade-in');
+                }
+            });
+
+            // Handle status alerts and empty states
+            if (matchesCount > 0) {
+                statusBox.classList.remove('hidden');
+                emptyState.classList.add('hidden');
+                statusText.innerHTML = `Found <strong>${matchesCount}</strong> matching keywords inside the bylaws. View highlighted results below.`;
+            } else {
+                statusBox.classList.add('hidden');
+                emptyState.classList.remove('hidden');
+                emptyQueryText.textContent = query;
+            }
+        }
+
+        // Helper regex utility
+        function escapeRegExp(string) {
+            return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        function clearSearch() {
+            document.getElementById('bylaws-search').value = '';
+            searchBylaws();
+        }
+    </script>
+</body>
+</html>
