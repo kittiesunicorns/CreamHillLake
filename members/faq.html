@@ -10,6 +10,17 @@
   <link rel="apple-touch-icon" href="../favicon-180.png" />
   <link rel="stylesheet" href="../css/styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    .faq-list { border: 1px solid var(--border, rgba(127,187,164,0.35)); border-radius: 14px; overflow: hidden; }
+    .faq-item { border-bottom: 1px solid var(--border, rgba(127,187,164,0.35)); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { width: 100%; background: none; border: none; padding: 1rem 1.25rem; text-align: left; font-family: inherit; font-size: 14.5px; font-weight: 600; color: #1a4a3a; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-q:hover, .faq-q[aria-expanded="true"] { background: #f0faf5; }
+    .faq-icon { flex-shrink: 0; font-size: 16px; color: #3a8060; transition: transform 0.2s; }
+    .faq-q[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 1.25rem 1rem; font-size: 14px; color: #4a6558; line-height: 1.75; background: #f0faf5; }
+    .faq-a.open { display: block !important; }
+  </style>
 </head>
 <body>
 
